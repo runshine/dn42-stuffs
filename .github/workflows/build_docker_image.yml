@@ -31,7 +31,7 @@ jobs:
       - name: Build and push dn42_bgp
         uses: docker/build-push-action@v5
         with:
-          context: ./bgp
+          context: bgp
           platforms: linux/amd64,linux/arm64,linux/s390x,linux/arm/v7
           push: true
           tags: |
@@ -67,7 +67,7 @@ jobs:
       - name: Build and push dn42_dns
         uses: docker/build-push-action@v5
         with:
-          context: ./bind9
+          context: bind9
           platforms: linux/amd64,linux/arm64,linux/s390x,linux/arm/v7
           push: true
           tags: |
