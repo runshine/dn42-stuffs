@@ -11,10 +11,4 @@ RUN cd /etc/bind/zones && \
     dnssec-signzone -K ../dnssec_keys -o e.0.a.8.a.a.2.d.2.4.d.f.ip6.arpa. ./e.0.a.8.a.a.2.d.2.4.d.f.ip6.arpa.zone && { echo "Generated DS record:"; cat ./dsset-e.0.a.8.a.a.2.d.2.4.d.f.ip6.arpa. ; }
     
 
-CMD ["sh", "-c", "\
-# 加去往dn42的路由
-ip r add 172.20.0.0/14 via $DN42_GATEWAY_V4 && \
-ip -6 r del default && ip -6 r add default via $DN42_GATEWAY_V6 && \
-# 启动服务
-docker-entrypoint.sh \
-"]
+CMD ["sh"]
