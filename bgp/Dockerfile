@@ -9,8 +9,7 @@ RUN apt-get update && \
 RUN apt-get update && \
     apt-get install -y tcpdump iperf3
 
-RUN curl -O http://ftp.us.debian.org/debian/pool/main/b/bird2/bird2_2.0.8-2_amd64.deb && \
-    apt-get install -y ./bird2_2.0.8-2_amd64.deb
+RUN apt-get install -y bird2
 
 RUN mkdir -p /etc/bird/peers && mkdir -p /run/bird/ && \
     touch /etc/bird/roa_dn42.conf && touch /etc/bird/roa_dn42_v6.conf
