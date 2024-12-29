@@ -5,7 +5,7 @@
 
 # https://github.com/WireGuard/wireguard-tools/blob/master/contrib/reresolve-dns/reresolve-dns.sh
 
-set -e
+#set -e
 shopt -s nocasematch
 shopt -s extglob
 export LC_ALL=C
